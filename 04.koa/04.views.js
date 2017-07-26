@@ -17,13 +17,11 @@ app.use(static(
     path.join(__dirname,  staticPath)
 ));
 
-app.use( async ctx => {
+app.use(async ctx => {
     await ctx.render('index', {
         title: 'hello koa2',
         content: 'This is content'
     });
 });
-
-
 
 app.listen(8090);

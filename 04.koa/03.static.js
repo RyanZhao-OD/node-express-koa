@@ -10,8 +10,7 @@ app.use(static(
     path.join(__dirname,  staticPath)
 ));
 
-
-app.use( async ctx => {
+app.use(async ctx => {
     ctx.body = 'koa static'
 });
 

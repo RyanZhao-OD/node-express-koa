@@ -7,16 +7,9 @@ const asyncTask = (data, millisecond) => {
 };
 
 async function process() {
-    let task1Value = await asyncTask('asyncTask1', 1000);
-    console.log(11);
-    // console.log(task1Value);
-
-    let syncValue = await 'syncTask';
-    // console.log(syncValue);
-
-    let task2Value = await asyncTask('asyncTask2', 1000);
-    // console.log(task2Value);
-
+    const task1Value = await asyncTask('asyncTask1', 1000);
+    const syncValue = await 'syncTask';
+    const task2Value = await asyncTask('asyncTask2', 1000);
     return `${task1Value} ${syncValue} ${task2Value}`;
 }
 

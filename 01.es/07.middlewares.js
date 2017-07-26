@@ -12,8 +12,9 @@ const b = () => {
 };
 
 const c = () => {
-    console.log(3);
-    return;
+    return 3;
 };
 
-a();
+a().then((data) => {
+    console.log(data);
+});

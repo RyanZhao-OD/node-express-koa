@@ -2,6 +2,7 @@ const middlewares = [
     async next => {
         console.log('middleware1');
         next();
+        // return '111';
     },
     async next => {
         console.log('middleware2');
@@ -10,9 +11,9 @@ const middlewares = [
     async next => {
         console.log('middleware3');
         next();
+        // return '222';
     }
 ];
-
 
 const dispatch = i => {
     let fn = middlewares[i];
@@ -30,4 +31,6 @@ const dispatch = i => {
     }
 };
 
-dispatch(0);
+dispatch(0).then(data => {
+    console.log(data);
+});

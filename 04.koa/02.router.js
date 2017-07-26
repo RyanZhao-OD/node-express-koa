@@ -19,7 +19,9 @@ router.get('/usercenter', async (ctx, next) => {
 
 });
 
-router.get('/login', async (ctx, next) => {
+// curl -X POST -H 'Cookie: BDUSS=aaa' -H 'X-ik-token: xxx'  http://localhost:8090/login
+router.post('/login', async (ctx, next) => {
+    console.log('------');
     ctx.body = 'login page';
 });
 

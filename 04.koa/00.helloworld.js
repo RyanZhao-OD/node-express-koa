@@ -7,10 +7,7 @@ app.use(loggerAsync());
 app.use(async (ctx, next) => {
     console.log('=====');
     ctx.body = 'hello koa2';
-    // console.log(ctx.request.req);
     console.log('-----');
-    // console.log(ctx.request);
-
 });
 
 app.listen(8090);

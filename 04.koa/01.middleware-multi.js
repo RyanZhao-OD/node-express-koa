@@ -8,15 +8,8 @@ const asyncTask = data => {
 };
 
 app.use(async (ctx, next) => {
-    process.nextTick(() => {
-        console.log('nextTick');
-    });
     console.log(1);
     await asyncTask('promise await').then(data => {
-        console.log(data);
-    });
-
-    asyncTask('promise').then(data => {
         console.log(data);
     });
 
