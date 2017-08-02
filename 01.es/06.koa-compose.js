@@ -23,7 +23,7 @@ function compose (middleware) {
                 return Promise.reject(err);
             }
         }
-    }
+    };
 }
 
 const middlewares = [
