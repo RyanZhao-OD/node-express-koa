@@ -7,7 +7,7 @@ const asyncTask = (data, millisecond) => {
 };
 
 async function process() {
-    console.log(this);
+    // console.log(this);
     const task1Value = await asyncTask('asyncTask1', 1000);
     console.log(task1Value);
     const syncValue = await 'syncTask';
@@ -16,14 +16,15 @@ async function process() {
     return `${task1Value} ${syncValue} ${task2Value}`;
 }
 
-process().then((data) => {
+process().then(data => {
     console.log(data);
 });
 
 console.log(typeof process);    // 'function'
+console.log(process.constructor);
 console.log(process.prototype); // undefined
 console.log(process.__proto__); // AsyncFunction {}
+console.log(process.__proto__.__proto__ === Function.prototype);    // true
 console.log(process instanceof Function); // true
-console.log(Reflect.getPrototypeOf(process));
-console.log(Reflect.getPrototypeOf(Reflect.getPrototypeOf(process)) === Function.prototype);    // true
+
 // new process();

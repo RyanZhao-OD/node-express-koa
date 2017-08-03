@@ -8,7 +8,7 @@ setTimeout(() => {
 
 new Promise((resolve, reject) => {
     resolve('promise');
-}).then((data) => {
+}).then(data => {
     console.log(data);
 });
 
